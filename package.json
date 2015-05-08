@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-utf-8-regex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "transforms regexes like /\\p{Letter}/ into working js regexes",
   "main": "modules/index.js",
   "scripts": {
