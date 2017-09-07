@@ -8,7 +8,8 @@ It also works with negations: either `\P{L}` or `\p{^L}`.
 
 ## shortcomings
 
-This plugin currently supports only a limited set of regular expressions. It basically transforms `\p{TYPE}` into `[TYPE-RANGES]`. This means that regular expressions like `/[\p{Arabic}\p{Greek}]/` or `/[^0-9\p{White_Space}]/` won't be correctly translated.
+* This plugin currently supports only a limited set of regular expressions. It basically transforms `\p{TYPE}` into `[TYPE-RANGES]`. This means that regular expressions like `/[\p{Arabic}\p{Greek}]/` or `/[^0-9\p{White_Space}]/` won't be correctly translated.
+* Doesn't work in Babel 6+
 
 So either commit a pull request or use something like `/(\p{Arabic}|\p{Greek})/` for now.
 
