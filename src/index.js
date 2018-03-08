@@ -1,11 +1,13 @@
-import transformer from "./transformer";
+import transform from "./transformer";
 
 export default function(babel) {
-  return new babel.Transformer("babel-utf8-regex-plugin", {
-    Literal: function(node) {
-      if (node.regex) {
-        return transformer(node.regex.pattern, node.regex.flags).toString();
+  return {
+    visitor: {
+      Literal({ node }) {
+        if (node.regex) {
+          return transform(node.regex.pattern, node.regex.flags).toString();
+        }
       }
     }
-  });
+  }
 }
