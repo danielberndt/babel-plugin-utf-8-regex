@@ -1,14 +1,22 @@
 {
   "name": "babel-plugin-utf-8-regex",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "transforms regexes like /\\p{Letter}/ into working js regexes",
   "main": "src/index.js",
-  "files": ["src/*.js"],
+  "files": [
+    "src/*.js"
+  ],
   "scripts": {
     "test": "eslint src test && jest",
     "prepublish": "npm test"
   },
-  "keywords": ["babel", "babel-plugin", "regex", "regular expression", "utf-8"],
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "regex",
+    "regular expression",
+    "utf-8"
+  ],
   "repository": "danielberndt/babel-plugin-utf-8-regex",
   "author": "Daniel Berndt",
   "license": "ISC",
