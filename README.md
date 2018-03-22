@@ -1,3 +1,8 @@
+
+> You probably want to use the official babel-plugin here:
+> https://github.com/babel/babel/tree/master/packages/babel-plugin-proposal-unicode-property-regex
+
+
 # babel-plugin-utf-8-regex
 
 Transforms a regular expression like `/^\p{Cyrillic}+$/` to `/^[Ѐ-҄҇-ԧᴫᵸⷠ-ⷿꙀ-ꚗꚟ]+$/`.
