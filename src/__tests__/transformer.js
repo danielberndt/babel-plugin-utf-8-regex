@@ -1,9 +1,8 @@
-/*eslint-env mocha */
+/*eslint-env jest */
 
-import expect from "expect.js";
-import transformer from "../src/transformer";
+const transformer = require("../transformer");
 
-const matches = (regex, string) => expect(string).to.match(transformer(regex.source));
+const matches = (regex, string) => expect(string).toMatch(new RegExp(transformer(regex.source)));
 
 describe("transformer", function() {
   it("should match hi", function() {
@@ -43,10 +42,14 @@ describe("transformer", function() {
   });
 
   it("should throw for unknown code points", function() {
-    expect(() => {transformer(/\p{Foo}/.source); }).to.throwException();
+    expect(() => {
+      transformer(/\p{Foo}/.source);
+    }).toThrow();
   });
 
   it("should throw for double negative", function() {
-    expect(() => {transformer(/\P{^L}/.source); }).to.throwException();
+    expect(() => {
+      transformer(/\P{^L}/.source);
+    }).toThrow();
   });
 });
